@@ -11,8 +11,8 @@ I've generated a file epcs.cvs with all of the FDA's unique [Established Pharmac
 
 My first step is reviewing all of the FDA  and associating each one with a rule.  There are only 355 so that shouldn't take too long.
 
-**Algorithm for which meds to take when:
-* Note: I'll create a proper bibliography citing the evidence for these rules if this project ever gets legs and is being used.
+###Algorithm for which meds to take when:
+* Note: I'll create a proper bibliography citing the evidence for these rules if this project ever gets legs and is being used.*
 + The default is to take a medication class as usual.
 + ACE-Inhibitors and ARB's: if taken in morning, skip that morning dose.
 + Diuretics: if taken in morning, skip that morning dose.
