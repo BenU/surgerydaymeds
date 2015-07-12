@@ -44,7 +44,8 @@ open('epcs_with_rules.csv', 'w') do |u|
     rule_number = rule[0]
     rule_string = rule[1]
     rule_string += ",#{rule[2]}" unless rule[2].nil?
-    dcs ="#{dc},#{rule_number},'#{rule_string}'"
+    rule_string = rule_string.gsub("'","")
+    dcs ="#{dc},#{rule_number},\"#{rule_string}\""
     puts "#{n}: #{dcs}"
     n += 1
     u << dcs << "\n"
