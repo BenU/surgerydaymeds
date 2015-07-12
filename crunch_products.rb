@@ -72,7 +72,6 @@ drug_hash = {}
     drug_csv.each do |row|
       row[3] != nil ? prop_name = row[3] : prop_name = "" 
       drug_name = (prop_name + " #{row[4]}").downcase.strip
-      puts "found ravicti" if drug_name == "ravicti"
       if drug_hash.key?(drug_name)
         # puts "OLD: " + drug_hash[drug_name]
         # a << "OLD: " + drug_hash[drug_name] + "\n"
@@ -125,11 +124,9 @@ drug_hash = {}
         drug_hash[drug_name] = drug_array.join(',')
         # puts "NEW:  " + drug_hash[drug_name]
         # a << "NEW:  " + drug_hash[drug_name] + "\n"
-        puts "Addended ravicti: #{drug_hash[drug_name]}" if drug_name == 'ravicti'
       else # new drug for database
         drug_hash[drug_name] = " #{row[0]}, #{row[1]}, #{row[2]}, #{drug_name}, #{nonproprietoryname(row[5])}, #{dosageformname(row[6])}, #{routename(row[7])}, #{marketingcategoryname(row[10])}, #{row[11]}, #{labelername(row[12])}, #{substance(row[13])}, #{row[14]},#{row[15]}, #{pharmclasses(row[16])}, #{row[17]}"
         # puts "*********new drug***********"
-         puts "First ravicti: #{drug_hash[drug_name]}" if drug_name == 'ravicti'
         # n << drug_hash[drug_name] + "\n"
         # puts "*********just created the above new drug*********"
       end
