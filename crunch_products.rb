@@ -30,9 +30,8 @@ end
 
 def nonproprietoryname(raw_string)
   return nil if raw_string.nil?
-  raw_string.gsub!("and",",")
-  return nil if raw_string.nil?
-  np_array = raw_string.split(',')
+  processed_string = raw_string.gsub("and",",")
+  np_array = processed_string.split(',')
   np_array.each { |np| np.strip! if np.respond_to? :strip! }
   return np_array.join(";").downcase
 end
@@ -70,7 +69,7 @@ drug_hash = {}
 #   open('add_to_drugs.csv', 'w') do |a|
 
     drug_csv.each do |row|
-      row[3] != nil ? prop_name = row[3].gsub(",", " ") : prop_name = "" 
+      row[3] != nil ? prop_name = row[3].gsub(",", " ").strip : prop_name = "" 
       prop_name_suffix = ""
       prop_name_suffix = "#{row[4].gsub(',', '')}".downcase.strip unless row[4] == nil
       drug_name = (prop_name + prop_name_suffix).downcase.strip
@@ -83,32 +82,32 @@ drug_hash = {}
         drug_array[1] += ";#{row[1]}"
         dosageform = dosageformname(row[6])
         if drug_array[5] == nil
-          drug_array[5] = " ;#{dosageform}"
+          drug_array[5] = ";#{dosageform}"
         else
           drug_array[5] += "; #{dosageform}"
         end
         if drug_array[6] == nil
-          drug_array[6] = " ;#{row[7]}"
+          drug_array[6] = ";#{row[7]}"
         else
           drug_array[6] += ";#{row[7]}"
         end
         if drug_array[7] == nil
-          drug_array[7] = " ;#{marketingcategoryname(row[10])}"
+          drug_array[7] = ";#{marketingcategoryname(row[10])}"
         else
           drug_array[7] += ";#{marketingcategoryname(row[10])}"  
         end
         if drug_array[8] == nil
-          drug_array[8] = " ;#{row[11]}"
+          drug_array[8] = ";#{row[11]}"
         else
           drug_array[8] += ";#{row[11]}"  
         end
         if drug_array[9] == nil
-          drug_array[9] = " ;#{labelername(row[12])}"
+          drug_array[9] = ";#{labelername(row[12])}"
         else
           drug_array[9] += ";#{labelername(row[12])}"
         end
         if drug_array[11] == nil
-          drug_array[11] = " ;#{row[14]}"
+          drug_array[11] = ";#{row[14]}"
         else
           drug_array[11] += ";#{row[14]}"
         end
@@ -119,7 +118,7 @@ drug_hash = {}
         end
         new_row_pharm_classes = pharmclasses(row[16])
         if drug_array[13] == nil
-          drug_array[13] = " ;#{new_row_pharm_classes}"
+          drug_array[13] = ";#{new_row_pharm_classes}"
         else
           drug_array[13] = add_new_pharm_classes(drug_array[13], new_row_pharm_classes)
         end
@@ -127,7 +126,7 @@ drug_hash = {}
         # puts "NEW:  " + drug_hash[drug_name]
         # a << "NEW:  " + drug_hash[drug_name] + "\n"
       else # new drug for database
-        drug_hash[drug_name] = " #{row[0]}, #{row[1]}, #{row[2]}, #{drug_name}, #{nonproprietoryname(row[5])}, #{dosageformname(row[6])}, #{routename(row[7])}, #{marketingcategoryname(row[10])}, #{row[11]}, #{labelername(row[12])}, #{substance(row[13])}, #{row[14]},#{row[15]}, #{pharmclasses(row[16])}, #{row[17]}"
+        drug_hash[drug_name] = " #{row[0]}, #{row[1]}, #{row[2]},#{drug_name},#{nonproprietoryname(row[5])},#{dosageformname(row[6])},#{routename(row[7])},#{marketingcategoryname(row[10])},#{row[11]},#{labelername(row[12])},#{substance(row[13])},#{row[14]},#{row[15]},#{pharmclasses(row[16])},#{row[17]}"
         # puts "*********new drug***********"
         # n << drug_hash[drug_name] + "\n"
         # puts "*********just created the above new drug*********"
