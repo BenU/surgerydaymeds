@@ -71,7 +71,7 @@ drug_hash = {}
     drug_csv.each do |row|
       row[3] != nil ? prop_name = row[3].gsub(",", " ").strip : prop_name = "" 
       prop_name_suffix = ""
-      prop_name_suffix = "#{row[4].gsub(',', '')}".downcase.strip unless row[4] == nil
+      prop_name_suffix = " #{row[4].gsub(',', '')}".downcase unless row[4] == nil
       drug_name = (prop_name + prop_name_suffix).downcase.strip
       if drug_hash.key?(drug_name)
         # puts "OLD: " + drug_hash[drug_name]
