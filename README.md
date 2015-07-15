@@ -2,6 +2,8 @@
 
 This project was started to help patients and the people who care for them have some evidence based guidance about their medications in the period leading up to a scheduled surgery.  
 
+I've also put together a more userfriendly website at [www.surgerydaymeds.com](https://surgerydaymeds.com/) where medication lists can be entered and processed using the database generated here.  
+
 If this project interests you and you have questions or want to help please reach out to me here through my github account.  
 
 I'm using the [FDA's](http://www.fda.gov/default.htm) [National Drug Code Directory](http://www.fda.gov/Drugs/InformationOnDrugs/ucm142438.htm) Database file which can be downloaded [here](http://www.fda.gov/Drugs/InformationOnDrugs/ucm142438.htm).
