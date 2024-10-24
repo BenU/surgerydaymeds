@@ -22,7 +22,7 @@ If this project starts to be used by healthcare providers and their patients I w
 + Metformin: Hold for at least 24 hours before major surgery.
 + Insulin: Discontinue long-acting forms and convert patient to regiment of NPH and regular.  Titrate day of surgery based on blood glucose level.
 + Blood thinners: Consult with surgeons and doctors who prescribed in the first place.  These medications often have compelling indications but contribute to surgical bleeding.  They may be discontinued or changed to a more short-acting for.  
-+ NSAID's: This medication is an NSAID or non-steroidal anti-inflamatory drug.  They are taken for pain but can cause bleeding check with your doctors and surgeons.
++ NSAID's: This medication is an NSAID or non-steroidal anti-inflamatory drug.  They are often taken for pain but can cause bleeding check with your doctors and surgeons.
 
 *Copyright 2015 Benjamin D. Unger*
 
