@@ -10,7 +10,9 @@ I'm using the [FDA's](http://www.fda.gov/default.htm) [National Drug Code Direct
 
 If this project starts to be used by healthcare providers and their patients I will improve this project's documentation.
 
-###Algorithm for which meds to take when:
+
+## Please note that the list below was created in 2015 and is outdated.  Do reach out to me if you're interested in more recent information
+##Algorithm for which meds to take when:
 *Note: I'll create a proper bibliography citing the evidence for these rules if this project ever gets legs and is being used.*
 + The default is to take a medication class as usual.
 + ACE-Inhibitors and ARB's: if taken in morning, skip that morning dose.
@@ -20,7 +22,7 @@ If this project starts to be used by healthcare providers and their patients I w
 + Metformin: Hold for at least 24 hours before major surgery.
 + Insulin: Discontinue long-acting forms and convert patient to regiment of NPH and regular.  Titrate day of surgery based on blood glucose level.
 + Blood thinners: Consult with surgeons and doctors who prescribed in the first place.  These medications often have compelling indications but contribute to surgical bleeding.  They may be discontinued or changed to a more short-acting for.  
-+ NSAID's: This medication is an NSAID or non-steroidal anti-inflamatory drug.  They are taken for pain, to thin the blood or both.  When taken to thin the blood, they are often important to continue taking.  Still, because they can cause surgical bleeding, check with your doctors and surgeons.
++ NSAID's: This medication is an NSAID or non-steroidal anti-inflamatory drug.  They are taken for pain but can cause bleeding check with your doctors and surgeons.
 
 *Copyright 2015 Benjamin D. Unger*
 
